@@ -1,5 +1,6 @@
 #!/bin/bash
 os=$(. /etc/os-release; echo "$NAME")
+rel=$(. /etc/os-release; echo "$VERSION_ID")
 ker=$(uname -r)
 pcpu=$(grep "physical id" /proc/cpuinfo | sort | uniq | wc -l)
 vcpu=$(grep "^processor" /proc/cpuinfo | wc -l)
@@ -19,7 +20,7 @@ ulog=$(users | wc -w)
 ip=$(hostname -I)
 mac=$(ip link show | awk '$1 == "link/ether" {print $2}')
 cmds=$(cat /var/log/sudo/sudo.log | grep COMMAND | wc -l)
-wall "	#Operating System: $os 
+wall "	#Operating System: $os Release: $rel
 	#Kernel: $ker
 	#CPU physical: $pcpu
 	#CPU virtual: $vcpu
@@ -29,6 +30,6 @@ wall "	#Operating System: $os
 	#Last reboot: $lrb
 	#LVM use: $lvmu
 	#Connexions TCP: $ctcp ESTABLISHED, UDP: $cudp ESTABLISHED
+	#Network: IP: ${ip}/ MAC: ${mac^^}
 	#User log: $ulog
-	#Network: IP $ip ($mac)
 	#Sudo: $cmds cmd"
