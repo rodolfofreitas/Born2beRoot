@@ -9,11 +9,11 @@
 #### Partitions Size
   Set up partitions correctly so you get a structure similar to the one below:
   
-  boot    - 525m<p>
-  root    - 10.7G<p>
-  swap    - 2.5G<p>
-  home    - 5.4G<p>
-  var     - 3.2G<p>
-  srv     - 3.2G<p>
-  tmp 	  - 3.2G<p>
+  boot    - 525m<br>
+  root    - 10.7G<br>
+  swap    - 2.5G<br>
+  home    - 5.4G<br>
+  var     - 3.2G<br>
+  srv     - 3.2G<br>
+  tmp 	  - 3.2G<br>
   var-log	- 4.3G
