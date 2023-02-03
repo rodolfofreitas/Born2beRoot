@@ -7,13 +7,13 @@
   your own operating system while implementing strict rules.
 
 #### Partitions Size
-
-name	size in project	size to create
-boot 	- 500m			- 525m 
-root 	- 10G			- 10.7G	
-swap	- 2.3G			- 2.5G
-home	- 5G			- 5.4G 
-var	- 3G			- 3.2G
-srv	- 3G			- 3.2G	
-tmp	- 3G			- 3.2G	
-var-log - 4G			- 4.3G
+  Set up partitions correctly so you get a structure similar to the one below:
+  
+boot    - 525m 
+root    - 10.7G	
+swap    - 2.5G
+home    - 5.4G 
+var     - 3.2G
+srv     - 3.2G	
+tmp 	  - 3.2G	
+var-log	- 4.3G
